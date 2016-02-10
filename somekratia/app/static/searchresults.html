@@ -1,0 +1,14 @@
+<div class="searchResults" ng-controller="searchController" infinite-scroll="loadMoreSearchResults()" threshold="100" can-load="canLoadMoreTextResults()">
+    <img src="/static/img/x-grey.png" class="close" ng-controller="closeController" ng-click="closeSearchResults()"/>
+    <div id="searchHead">Hakusanalla "{{ issueService.searchInfo.text }}" löytyi {{ issueData.textSearchResultCount }} hakutulosta. </div>
+    <div>
+        <ul>
+            <li class="resultlist" ng-repeat="x in issueData.textSearchResults">
+                <div ng-controller="windowController" ng-click="windowClick(x.id)">{{ x.subject }}<br/>Viimeisin päätös: {{ x.latest_decision_date | date: 'dd.MM.yyyy' }}</div>
+            </li>
+            <li  class="middle" ng-show="issueData.textSearchLoading">
+                <img src="/static/loader.gif" width="30"/>
+            </li>
+        </ul>
+    </div>
+</div>

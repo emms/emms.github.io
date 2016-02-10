@@ -1,0 +1,47 @@
+<img src="/static/img/x-grey.png" class="close" ng-controller="closeProfileController" ng-click="closeProfile()"/>
+<div class="userDetails">
+    <div class="profileLeft">
+        <h1 class="usernameTitle">{{ userData.username }}</h1>
+        <img height="128" src="{{ userData.profilePictureUrl() }}" />
+        <div ng-controller="pictureController">
+            <p>Vaihda profiilikuva:</p>
+            <!--<form enctype="multipart/form-data">
+            <input type="file" file="file" id="file" name="profile_picture"/>
+            <button class="blue-button" ng-click="changePicture()">Vaihda kuva</button>
+            </form>-->
+            <form name="myForm">
+
+                  <input type="file" ngf-select ng-model="file" name="picture"
+                         accept="image/*" ngf-max-size="4MB" required
+                         ngf-model-invalid="errorFiles">
+                  <i ng-show="myForm.picture.$error.required"></i><br>
+                  <i ng-show="myForm.picture.$error.maxSize">File too large
+                      {{errorFiles[0].size / 1000000|number:1}}MB: max 2M</i>
+                <button ng-click="file = null" ng-show="file">Remove</button>
+                  <br>
+                  <button class="blue-button" ng-disabled="!myForm.$valid"
+                          ng-click="changePicture(file)">Submit</button>
+                  <span class="progress" ng-show="file.progress >= 0">
+                    <p style="width:{{file.progress}}%"
+                        ng-bind="file.progress + '%'"></p>
+                  </span>
+                  <p ng-show="file.result">Upload Successful</p>
+                  <p class="err" ng-show="errorMsg">{{errorMsg}}</p>
+
+                <br>
+            </form>
+        </div>
+    </div>
+    <div class="user-subscriptions profileRight" ng-controller="subscriptionController">
+        <h2>Seuratut päätökset</h2>
+        <ul>
+            <li ng-repeat="(id, issue) in userData.subscriptions">
+                <div ng-controller="windowController" ng-click="windowClick(id)">
+                    {{ issue.title }}
+
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</div>

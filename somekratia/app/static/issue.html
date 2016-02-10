@@ -1,0 +1,109 @@
+<img src="/static/img/x-grey.png" class="close" ng-controller="closeController" ng-click="closeIssue()"/>
+<div class="timeline-background">
+    <div class="placeholder-timeline">&nbsp;</div>
+    <div ng-repeat="d in issueData.decisions">
+        <div title="Katso päätös klikkaamalla tästä" class="timeline-decision" ng-style="getStyle($index, d.origin_last_modified_time);" ng-click="gotoDecision(d.id)"></div>
+    </div>
+    <div ng-repeat="m in issueData.messagesAndReplies">
+        <div title="Katso kommentti klikkaamalla tästä" class="timeline-message" ng-style="getStyle($index, m.created);" ng-click="gotoMessage(m.id)">
+            <div class="timeline-m-picture-container">
+                <img id="{{ $index }}" class="timeline-message-picture" ng-style="getPictureStyle($index)" ng-src="/user/{{ m.poster.id }}/picture"/>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="issueDetails">
+    <div class="issueInfo">
+        <h2>{{ issueData.data.subject }} </h2>
+
+        <div ng-controller="loginWindowController" ng-show="!userData.isLoggedIn()"><p><span ng-click="toggleShow()" class="issueLogin">Kirjaudu sisään</span> osallistuaksesi keskusteluun.</p></div>
+
+        <div class="subscribe" ng-controller="subController" ng-show="userData.isLoggedIn()">
+            <h5 ng-click="subscribeIssue(issueData.data)"><span ng-class="subscribeClass">★</span> {{ subscribeText }}</h5>
+        </div>
+        <h4 class="date">Viimeisin päätös: {{ lastDecisionTime() }}</h4>
+        <p>{{ issueData.data.summary }} </p>
+
+        <div ng-show="userData.isLoggedIn()">
+            <div ng-controller="messageInputController">
+                <label for="messagefield">
+                    <textarea ng-model="messageText.value" id="messagefield" name="messagefield" rows="6" cols="65"></textarea>
+                </label>
+                <div class="button" ng-init="isDisabled = true">
+                    <button ng-class="isTextLongEnough() ? ' ' : 'disabled-send-button'" class="send-button" ng-click="postMessage(issueData.issueId)">Lähetä viesti</button>
+                </div>
+            </div>
+        </div>
+        <h4 class="attachment-heading">Päätökset: </h4>
+        <ul class="decision-list">
+            <li ng-controller="attachmentsController" data-ng-repeat="d in issueData.decisions">
+                <div ng-class="d.attachmentsShow.value ? 'active' : 'inactive'" class="decision" ng-click="toggleAttachments(d.id)">
+                    <a ng-attr-id="{{ d.id }}"></a>
+                    {{ d.meeting.policymaker_name + " " }} {{ d.meeting.date | date: 'dd.MM.yyyy' }}
+                    <img class="decision-arrow" ng-src="/static/img/arrow_down.png">
+                </div>
+                <div class="decision-details" ng-show="d.attachmentsShow.value">
+                    <div data-ng-repeat="c in d.content">
+                        <div ng-bind-html="to_trusted(c.text)"></div>
+                    </div>
+                    <ul class="attachment-list">
+                        <div ng-show="d.attachments.length > 0"class="liitteet">Liitteet</div>
+                        <li data-ng-repeat="a in d.attachments | filter:{ public: true} ">
+                           <a href="{{ a.file_uri }}" target="_blank">{{ a.name }}: {{ a.file_type }}</a>
+                        </li>
+                        <li data-ng-repeat="a in d.attachments | filter:{ public: false} ">
+                           Salainen liite
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="messages">
+        <div class="message-container" ng-repeat="m in issueData.messages | orderBy:'-created'" ng-controller="replyController" ng-init="replies = m.replies">
+
+            <div class="messageBubble">
+                <a ng-attr-id="{{ m.id }}"></a>
+                <div class="poster-picture-wrapper">
+                    <div class="poster-picture-container">
+                        <img id="{{ m.created }}" class="poster-picture" ng-style="getPictureStyle(m.created)" ng-src="/user/{{ m.poster.id }}/picture"/>
+                    </div>
+                </div>
+                <div class="messageInfo">
+                    <h3 class="poster">{{m.poster.username}}</h3>
+                    <h3 class="time-posted">{{m.created | date: 'dd.MM.yyyy HH:mm'}}</h3>
+                </div>
+                <p class="messageText"><span ng-bind-html="m.text"></span></p>
+                
+                <img class="thumbsup" ng-show="userData.isLoggedIn()"ng-src="{{ issueData.isMessageLiked(m) ? '../../static/img/thumbs-up-green.png' : '../../static/img/thumbs-up.png' }}" ng-click="likeMessage(m)">
+                <span class="likes-amount">{{ m.liked_by.length }}</span>
+                <span class="likes-txt" ng-show="!userData.isLoggedIn()"> tykkäystä</span>
+                <div class="reply" ng-show="userData.isLoggedIn()" ng-click="toggleReplyControls()">Vastaa</div>
+                <div class="reply-input" ng-show="showReplyControls.value">
+                    <textarea ng-model="replyText.value" name="replyfield" rows="6" cols="70"></textarea>
+                    <div class="button" ng-init="isDisabled = true">
+                        <button ng-class="isTextLongEnough() ? ' ' : 'disabled-send-button'" class="send-button" ng-click="replyToMessage(m)">Lähetä viesti</button>
+                    </div>
+                </div>
+            </div>
+            <div ng-repeat="r in replies">
+                <div class="replyBubble">
+                    <div class="poster-picture-wrapper">
+                        <div class="poster-picture-container">
+                            <img id="{{ r.created }}" class="poster-picture" ng-style="getPictureStyle(r.created)" ng-src="/user/{{ r.poster.id }}/picture"/>
+                        </div>
+                    </div>
+                    <h3 class="poster">{{r.poster.username}}</h3>
+                    <h3 class="time-posted">{{r.created | date: 'dd.MM.yy HH:mm'}}</h3>
+                    <p class="messageText"><span ng-bind-html="r.text"></span></p>
+                    <img class="thumbsup" ng-show="userData.isLoggedIn()" ng-src="{{ issueData.isMessageLiked(r) ? '../../static/img/thumbs-up-green.png' : '../../static/img/thumbs-up.png' }}" ng-click="likeMessage(r)">
+                    <span class="likes-amount">{{ r.liked_by.length }}</span>
+                    <span class="likes-txt" ng-show="!userData.isLoggedIn()"> tykkäystä</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

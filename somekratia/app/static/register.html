@@ -1,0 +1,42 @@
+<div class="login-box register" ng-controller="loginWindowController" ng-click="textfieldClick()">
+    <div class="loginRegister">
+        <h5 ng-click="toggleLoginRegister()">Kirjaudu</h5>
+        <h5 class="loginRegister-active">Rekisteröidy</h5>
+    </div>
+    <div class="registerfieldcontainer">
+        <div class="register-headings">
+            <h5>Etunimi: </h5>
+            <h5>Sukunimi: </h5>
+            <h5>Käyttäjänimi: </h5>
+            <h5>Sähköposti: </h5>
+            <h5>Salasana: </h5>
+        </div>
+        <div class="register-fields">
+            <label for="firstnameinput">
+                <input type="text" ng-model="firstname" id="firstnameinput" name="firstname" placeholder="Etunimi" />
+            </label>
+
+            <label for="lastnameinput">
+                <input type="text" ng-model="lastname" id="lastnameinput" name="lastname" placeholder="Sukunimi" />
+            </label>
+
+            <label for="usernameinput">
+                <input type="text" ng-model="username" id="usernameinput" name="username" placeholder="Käyttäjänimi" />
+            </label>
+
+            <label for="emailinput">
+                <input type="text" ng-model="email" id="emailinput" name="email" placeholder="Sähköposti" />
+            </label>
+
+            <label for="passwordinput">
+                <input type="password" ng-model="password" ng-keyup="$event.keyCode == 13 && login(username, password)" id="passwordinput" name="password" placeholder="Salasana" />
+            </label>
+
+        </div>
+    </div>
+    <div class="button">
+        <button class="blue-button" ng-click="register(username, email, password, file)">Rekisteröidy</button>
+        <button class="blue-button" ng-click="toggleShow()">Peruuta</button>
+    </div>
+
+</div>
