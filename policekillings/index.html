@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link type="text/css" rel="stylesheet" href="css/style.css" /> <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	<title>Police killings</title>
+</head>
+<body>
+	<main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script type="text/javascript" src="js/script_v2.js"></script>
+
+		<div class="intro-bg">
+			<h1>People killed by the police</h1>
+			<div class="text-container">
+				<p class="intro-txt">This is a visualisation about people killed by the police in the United States during the years 2013 and 2014. Explore the data by hovering your mouse over different counties. The map that you see now shows the amounts of people killed by the police in different counties, but you can change the variable to visualise the people killed by age, gender and race as well. When you change the variable, give the map a few seconds to reload.</p>
+			</div>
+			<div class="btnForward">
+				<div class="arrow"></div>
+			</div>
+		</div>
+
+	<!--<div>
+		<h1>People killed by the police in the USA</h1>
+	</div>-->
+	<div class="info-button"></div>
+	<div class="info-window hide">
+		<img class="info-close" src="close-button.png">
+		<p>You can explore the data by hovering your mouse over different counties and changing the variable to visualise by. The data is complete from the years 2013 and 2014. Please note, that the categorisation by race may be biased, since in many cases the race of the deceased is not reported.</p>
+	</div>
+		
+	<div class="content"></div>
+</main>
+<footer class="page-footer red-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<p class="grey-text text-lighten-4">This visualization was made for the course ME-E4500 - Explorative Information Visualization in Aalto University.</p>
+			</div>
+			<div class="col l6 offset-l2 s12">
+				<h5 class="white-text">Links</h5>
+				<ul>
+					<li><a class="grey-text text-lighten-3" href="http://fatalencounters.org">Data source: Fatal Encounters</a></li>
+					<li><a class="grey-text text-lighten-3" href="http://www.theguardian.com/us-news/series/counted-us-police-killings">The Counted: a visualisation by the Guardian</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+			© 2015 Emmi Linkola
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>
