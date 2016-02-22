@@ -45,13 +45,23 @@ a {
 	text-decoration: underline;
 }
 
-a:hover, a:focus, .navbar li a:hover, .navbar li a:focus {
+a:hover, a:focus {
 	cursor: pointer;
 	color: #f3e763;
 	background-color: transparent !important;
-	/*text-decoration: underline;*/
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.navbar li a:hover, .navbar li a:focus {
+	color: #f3e763;
 	padding-bottom: 2.5px;
 	border-bottom: 2px solid #f3e763;
+}
+
+.link {
+	border-bottom: 0;
+	padding-bottom: 0;
 }
 
 .navbar li {
