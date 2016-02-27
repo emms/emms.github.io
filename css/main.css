@@ -11,6 +11,12 @@ html {
   background-size: cover;
 }
 
+@font-face {
+    font-family: Orator Std;
+    src: url(../fonts/OratorStd.otf);
+}
+
+
 body {
 	background-color: transparent;
 	color: #FFF;
