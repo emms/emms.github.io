@@ -9,6 +9,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  -webkit-font-smoothing: antialiased;
 }
 
 @font-face {
