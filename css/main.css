@@ -17,10 +17,14 @@ html {
 }
 
 @font-face {
-	font-family: Roboto;
+	font-family: Roboto-Thin;
 	src: url(../fonts/roboto/Roboto-Thin.ttf);
 }
 
+@font-face {
+	font-family: Roboto;
+	src: url(../fonts/roboto/Roboto-Regular.ttf);
+}
 
 body {
 	background-color: transparent;
@@ -116,6 +120,7 @@ li:hover {
 	display: inline-block;
 	padding: 0 15%;
 	color: black;
+	font-family: Roboto-Thin;
 }
 
 .white-border {
@@ -155,7 +160,7 @@ li:hover {
 .txt-left-column {
 	width: 45%;
 	float: left;
-	padding: 20% 0 0 10%;
+	padding: 18% 0 0 10%;
 }
 
 .txt-right-column {
