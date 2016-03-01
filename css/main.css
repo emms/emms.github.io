@@ -4,7 +4,7 @@ html * {
 }
 
 html { 
-  background: url("../img/homepage_bg_2.jpg") no-repeat center center fixed; 
+  background: url("../img/homepage_bg_4.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -14,6 +14,11 @@ html {
 @font-face {
     font-family: Orator Std;
     src: url(../fonts/OratorStd.otf);
+}
+
+@font-face {
+	font-family: Roboto;
+	src: url(../fonts/roboto/Roboto-Thin.ttf);
 }
 
 
@@ -27,7 +32,7 @@ nav.navbar {
 	position: absolute;
 	top: 65%;
 	width: 100%;
-	background: rgba(255,255,255,0.1);
+	background: rgba(115,115,115,0.8);
 	border: none;
 	border-radius: 0;
 	margin: 0;
@@ -36,6 +41,7 @@ nav.navbar {
 
 .heading {
 	margin-top: 8%;
+	color: #ffc600;
 }
 
 h1 {
@@ -47,22 +53,26 @@ h2 {
 }
 
 a {
-	color: #f3e763;
+	color: #ffc600;
 	text-decoration: underline;
+}
+
+p {
+	font-family: Roboto;
+	font-size: 16px;
 }
 
 a:hover, a:focus {
 	cursor: pointer;
-	color: #f3e763;
+	color: #ffc600;
 	background-color: transparent !important;
 	border-bottom: none;
 	padding-bottom: 0;
 }
 
 .navbar li a:hover, .navbar li a:focus {
-	color: #f3e763;
 	padding-bottom: 2.5px;
-	border-bottom: 2px solid #f3e763;
+	border-bottom: 2px solid white;
 }
 
 .link {
@@ -105,6 +115,7 @@ li:hover {
 .frontpage-smalltext {
 	display: inline-block;
 	padding: 0 15%;
+	color: black;
 }
 
 .white-border {
@@ -125,7 +136,7 @@ li:hover {
 }
 
 .part-bg {
-	background: rgba(255,255,255,0.1);
+	background: rgba(115,115,115,0.9);
 	width: 90%;
 	height: 90%;
 	margin-left: 5%;
@@ -208,6 +219,10 @@ li:hover {
 
 .txt-higher {
 	padding-top: 16%;
+}
+
+#main {
+	text-align: center;
 }
 
 
