@@ -18,7 +18,7 @@
     <![endif]-->
 </head>
 
-<body data-0="background-color:rgb(0,0,0);" data-500="background-color:rgb(60,60,60);" data-1000="background-color:rgb(20,20,20);">
+<body data-0="background-color:rgb(0,0,0);" data-500="background-color:rgb(30,30,30);" data-1000="background-color:rgb(15,15,15);">
     <!--<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -60,25 +60,27 @@
     <div id="skrollr-body" class="">
         <div class="frontpage col-xs-12">
             <div class="dark-overlay"></div>
-            <video loop muted autoplay poster class="fullscreen-bg__video">
-                <source src="video/bg_footage.mp4" type="video/mp4">
-            </video>
+            <div class="video-div">
+                <video id="video-block" loop muted autoplay poster class="fullscreen-bg-video">
+                    <source src="video/bg_footage.mp4" type="video/mp4">
+                </video>
+            </div>
             <div class="frontpage-container">
                 <div class="logo-container">
+                    <h1 class="main-header">TECHNOLOGY. EXPERIENCE. COMMUNITY.</h1>
                     <!-- TODO: MAKE LOGO CORRECT (SMALL) SIZE -->
                     <img class="main-logo" src="img/logo_nogrunge.png">
                     <img class="main-logo" src="img/junction_logo.png">
                 </div>
-                <h1>Join the biggest hackathon in Europe</h1>
-                <div class="apply-btn">
-                    <a href="">APPLY</a>
+                <div class="frontpage-btn">
+                    <a href="#about">LEARN MORE</a>
                 </div>
             </div>
         </div>
         <div id="about" class="col-xs-12 section">
             <div class="section-identifier">
-                <div class="section-number" data-0="margin-top: 20%;" data-500="margin-top: -20%;">01</div>
-                <div class="section-header" data-0="top: 80%;" data-500="top: 20%;">
+                <div class="section-number" data-0="margin-top: 20%;" data-800="margin-top: -20%;">01</div>
+                <div class="section-header" data-0="top: 80%;" data-700="top: 20%;">
                     <span>about</span>
                 </div>
             </div>
@@ -91,8 +93,8 @@
         </div>
         <div id="tracks" class="col-xs-12 section">
             <div class="section-identifier">
-                <div class="section-number" data-500="margin-top: 20%;" data-1000="margin-top: -20%;">02</div>
-                <div class="section-header" data-500="top: 80%;" data-1000="top: 20%;">
+                <div class="section-number" data-500="margin-top: 20%;" data-1200="margin-top: -20%;">02</div>
+                <div class="section-header" data-500="top: 80%;" data-1100="top: 20%;">
                     <span>tracks</span>
                 </div>
             </div>
@@ -101,6 +103,9 @@
                 <p class="section-txt">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
+                <div class="button topmargin50">
+                    <a href="">MORE</a>
+                </div>
             </div>
         </div>
     </div>
@@ -111,6 +116,22 @@
     <script type="text/javascript" src="js/lib/skrollr.min.js"></script>
     <script type="text/javascript">
     var s = skrollr.init();
+    </script>
+    <script>
+    var w = $(window).width(),
+        h = $(window).height();
+    $('#video-block video').css({
+        height: '' + h + '',
+        width: '' + w + ''
+    });
+    $(window).resize(function() {
+        var w = $(window).width(),
+            h = $(window).height();
+        $('#video-block video').css({
+            height: '' + h + '',
+            width: '' + w + ''
+        });
+    });
     </script>
 </body>
 
