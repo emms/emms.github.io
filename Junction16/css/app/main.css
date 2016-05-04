@@ -2,7 +2,6 @@ body {
     background-color: black;
     font-family: Hack-Regular;
     -webkit-font-smoothing: antialiased;
-
 }
 
 @font-face {
@@ -33,8 +32,8 @@ h2 {
 h2,
 p {
     color: #FFF;
-
 }
+
 a:hover {
     text-decoration: none;
 }
@@ -75,7 +74,13 @@ a:hover {
     margin-top: 9vh;
 }
 
-.frontpage-btn a, .button a {
+.double-down-arrow {
+    display: block;
+    color: #dc5a26;
+}
+
+.frontpage-btn a,
+.button a {
     color: #FFF;
     font-size: 16px;
 }
@@ -149,13 +154,13 @@ a:hover {
 }
 
 @media (max-width: 767px) {
-    .fullscreen-bg__video {
+    .fullscreen-bg-video {
         display: none;
     }
 }
 
 .dark-overlay {
-    opacity: 0.5;
+    opacity: 0.7;
     background-image: url(../../img/noise.png);
     background-repeat: repeat;
     width: 100%;
@@ -175,4 +180,5 @@ a:hover {
     padding: 10px 40px;
     display: inline-block;
 }
+
 
