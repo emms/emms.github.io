@@ -1,6 +1,6 @@
 .buzz_wrapper {
     position: relative;
-    width: 88%;
+    width: 700px;
     margin: 0 auto;
     padding: 0;
     text-align: left;
@@ -19,9 +19,10 @@
 .buzz_wrapper span {
     position: absolute;
     /*-webkit-filter: blur(1px);*/
-    font-size: 50px;
-    font-family: 'Iceland-Regular', fixed;
+    font-size: 75px;
+    font-family: 'Neou', fixed;
     font-weight: bold;
+    line-height: 1.3;
 }
 
 .buzz_wrapper span:nth-child(1) {
@@ -38,7 +39,7 @@
 
 .buzz_wrapper span:nth-child(3) {
     color: green;
-    position: 20px 0;
+    position: 10px 0;
     /*-webkit-filter: blur(1px);*/
 }
 
@@ -59,7 +60,7 @@
 
 @-webkit-keyframes blur {
     0% {
-        -webkit-filter: blur(1px);
+        /*-webkit-filter: blur(1px);*/
         opacity: 0.8;
     }
     50% {

@@ -1,7 +1,13 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
     background-color: black;
     font-family: Hack-Regular;
     -webkit-font-smoothing: antialiased;
+    margin-bottom: 300px;
 }
 
 @font-face {
@@ -27,6 +33,8 @@ h1 {
 
 h2 {
     font-family: Hack-Bold;
+    font-size: 24px;
+    line-height: 1.2;
 }
 
 h2,
@@ -38,8 +46,40 @@ a:hover {
     text-decoration: none;
 }
 
-#skrollr-body {
+main {
+    height: 100%;
+}
+
+.footer {
+    height: 300px;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
     text-align: center;
+}
+
+.footer p {
+    color: black;
+}
+
+.footer-logo-txt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-links {
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.footer-links i {
+    padding: 0 10px;
+}
+
+#skrollr-body {
+    /*text-align: center;*/
 }
 
 .frontpage {
@@ -53,13 +93,38 @@ a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 75%;
+    width: 90%;
+}
+
+.margin0 {
+    margin: 0;
 }
 
 .main-logo {
-    width: 25%;
+    width: 250px;
     display: block;
     margin: 0 auto;
+}
+
+.main-logo-txt {
+    display: none;
+}
+
+.logo-txt-container {
+    position: relative;
+    text-align: left;
+    opacity: 1;
+    margin: 30px 0 0 0;
+    z-index: 1000;
+}
+
+.logo-txt {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.main-logo {
+    margin: 0 auto 7vh auto;
 }
 
 .main-header {
@@ -71,23 +136,20 @@ a:hover {
     padding: 10px 20px;
     display: inline-block;
     cursor: pointer;
-    margin-top: 9vh;
-}
-
-.double-down-arrow {
-    display: block;
-    color: #dc5a26;
+    margin-top: 7vh;
 }
 
 .frontpage-btn a,
-.button a {
+.button a,
+.button p {
     color: #FFF;
     font-size: 16px;
+    margin: 0;
+    cursor: pointer;
 }
 
 .section {
-    min-height: 80vh;
-    padding-top: 10%;
+    padding: 15% 0 0 0;
 }
 
 .section-identifier {
@@ -110,7 +172,6 @@ a:hover {
     color: black;
     display: inline-block;
     padding: 10px 20px;
-    line-height: 19px;
     letter-spacing: 50;
 }
 
@@ -130,6 +191,10 @@ a:hover {
     position: absolute;
     top: 23%;
     left: 16%;
+}
+
+.section-left {
+    padding-right: 5%;
 }
 
 .video-div {
@@ -157,14 +222,19 @@ a:hover {
     .fullscreen-bg-video {
         display: none;
     }
+
+    .main-logo-txt {
+        width: 250px;
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 .dark-overlay {
-    opacity: 0.7;
-    background-image: url(../../img/noise.png);
+    opacity: 0.5;
+    background-color: black;
     background-repeat: repeat;
     width: 100%;
-    height: 100%;
     position: absolute;
     z-index: 0;
     top: 0;
@@ -179,6 +249,113 @@ a:hover {
     border: 2px solid #5bc8d7;
     padding: 10px 40px;
     display: inline-block;
+    cursor: pointer;
+    transition: 0.5s background-color;
 }
 
+.button:hover {
+    background-color: #5bc8d7;
+}
 
+.padding0 {
+    padding: 0;
+}
+
+.about-img {
+    width: 100vw;
+    height: 36.03vw;
+    background-image: url('../../img/about_img.jpg');
+    background-size: contain;
+    position: relative;
+}
+
+.push {
+    height: 300px;
+}
+
+@media only screen and (max-width: 780px) {
+    .about-img {
+        height: 82vw;
+        width: 130vw;
+        margin-left: -30%;
+        overflow: hidden;
+        background-size: cover;
+    }
+    .footer-links {
+        padding-top: 60px;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    .subscribe-btn {
+        margin: 10% 0 0 0 !important;
+    }
+    .logo-txt {
+        display: none;
+    }
+}
+
+.subscription-container {
+    margin-top: 40px;
+}
+
+input[type="email"] {
+    background: none;
+    border: 1px solid limegreen;
+    padding: 10px;
+    width: 250px;
+    color: white;
+}
+
+input:focus {
+    outline: none;
+}
+
+.subscribe-btn {
+    border: 1px solid magenta;
+    display: inline-block;
+    padding: 11px;
+    color: #FFF;
+    margin-left: 15px;
+    background-color: transparent;
+}
+
+.subscribe-btn:hover {
+    transition: background-color 0.5s;
+    background-color: magenta;
+    cursor: pointer;
+}
+
+#mc_embed_signup .mc-field-group,
+#mc_embed_signup .mc-responses,
+#mc_embed_signup .clear {
+    display: inline;
+}
+
+.overlay {
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    z-index: 200;
+    cursor: pointer;
+    display: none;
+}
+
+.overlay-video {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 201;
+}
+
+@media only screen and (max-width: 560px) {
+    .overlay-video iframe {
+        width: 90vw;
+    }
+}

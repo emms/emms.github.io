@@ -1,0 +1,9 @@
+.content-img {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.img-1 {
+	background-image: url('../../img/48hours.jpg');
+}
