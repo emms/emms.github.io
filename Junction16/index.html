@@ -36,7 +36,25 @@
     </script>
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <main>
         <div id="skrollr-body" class="">
             <div class="frontpage col-xs-12 padding0">
@@ -128,14 +146,10 @@
             </div>
             <div id="tracks" class="col-xs-12 section">
                 <div class="col-sm-10 col-sm-offset-1">
-                    <div class="col-md-3 col-sm-4 padding0" data-toggle="modal" data-target="#myModal">
-                        <div class="grey-bg track-box"></div>
-                    </div>
-                    <div class="col-md-6 col-sm-4 tracks-heading">
-                        <h2 class="section-heading">TRACKS</h2>
-                    </div>
-                    <div class="col-md-3 col-sm-4 padding0" data-toggle="modal" data-target="#myModal">
-                        <div class="grey-bg track-box"></div>
+                    <div class="row margin0">
+                        <div class="col-xs-12 tracks-heading">
+                            <h2 class="section-heading">TRACKS</h2>
+                        </div>
                     </div>
                     <div class="col-md-3 col-sm-4 padding0" data-toggle="modal" data-target="#myModal">
                         <div class="grey-bg track-box"></div>
@@ -161,21 +175,45 @@
                     <div class="col-md-3 col-sm-4 padding0" data-toggle="modal" data-target="#myModal">
                         <div class="grey-bg track-box"></div>
                     </div>
-                    <!-- Modal -->
-                    <div id="myModal" class="modal fade" role="dialog">
-                        <div class="modal-dialog">
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Modal Header</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Some text in the modal.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
+                </div>
+            </div>
+            <div id="lastyear" class="col-xs-12 section">
+                <div class="col-xs-10 col-xs-offset-1 col-md-5 section-left">
+                    <h2 class="section-heading">STUFF ABOUT LAST YEAR</h2>
+                    <div class="row margin0">
+                        <p class="section-txt">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                    <div class="button" style="margin: 50px 0;">
+                        <p>THIS BUTTON DOES NOTHING</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-5 section-right content-img img-1">
+                </div>
+            </div>
+            <div id="faq" class="col-xs-12 section">
+                <div class="col-xs-10 col-xs-offset-1" style="position:relative;">
+                    <h2 class="section-heading">FREQUENTLY ASKED QUESTIONS</h2>
+                    <div class="faq-container">
+                        <div class="faq-box">
+                            <div class="faq-q">
+                                <p>Lorem ipsum Ullamco dolor magna Ut culpa dolore nulla nisi Excepteur reprehenderit anim ut consequat nisi incididunt in aute?</p>
+                            </div>
+                            <i class="fa fa-angle-down faq-arrow fa-2x" aria-hidden="true"></i>
+                            <div class="faq-a">
+                                <p>Lorem ipsum Qui nisi velit aliqua non adipisicing aliqua Duis nulla labore sed eiusmod ut sit Ut irure Ut dolor anim ullamco culpa qui esse qui in magna Excepteur culpa occaecat commodo id Ut et commodo occaecat est. Lorem ipsum Nostrud adipisicing nulla qui tempor Excepteur et Duis ex incididunt deserunt consequat ut irure labore eiusmod voluptate dolor voluptate ex sunt ut commodo do exercitation irure exercitation velit quis esse dolor consequat exercitation nisi magna.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-container">
+                        <div class="faq-box">
+                            <div class="faq-q">
+                                <p>Lorem ipsum Ullamco dolor magna Ut culpa dolore nulla nisi Excepteur reprehenderit?</p>
+                            </div>
+                            <i class="fa fa-angle-down faq-arrow fa-2x" aria-hidden="true"></i>
+                            <div class="faq-a">
+                                <p>Lorem ipsum Qui nisi velit aliqua non adipisicing aliqua Duis nulla labore sed eiusmod ut sit Ut irure Ut dolor anim ullamco culpa qui esse qui in magna Excepteur culpa occaecat commodo id Ut et commodo occaecat est. Lorem ipsum Nostrud adipisicing nulla qui tempor Excepteur et Duis ex incididunt deserunt consequat ut irure labore eiusmod voluptate dolor voluptate ex sunt ut commodo do exercitation irure exercitation velit quis esse dolor consequat exercitation nisi magna. Lorem ipsum Quis quis dolor aute do velit occaecat enim velit nulla consequat. Lorem ipsum Nulla occaecat consequat sint culpa ullamco nisi anim eiusmod amet reprehenderit amet consectetur aliquip id ut aliquip incididunt id Duis occaecat commodo irure sed culpa ut magna mollit anim dolor laborum id.</p>
                             </div>
                         </div>
                     </div>
@@ -198,9 +236,6 @@
                 <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
                 <i class="fa fa-medium fa-3x" aria-hidden="true"></i>
             </div>
-            <div class="col-xs-12 padding0 footer-logo-txt">
-                <img src="img/junction_logo_black.png" style="width: 100%;">
-            </div>
         </div>
     </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -212,16 +247,17 @@
     <script type="text/javascript" src="js/app/videoResize.js"></script>
     <script type="text/javascript" src="js/app/smoothScroll.js"></script>
     <script type="text/javascript" src="js/app/glitch.js"></script>
+    <script type="text/javascript" src="js/app/faq.js"></script>
     <script type="text/javascript">
     /*(function($) {
-                                                    // Init Skrollr
-                                                    var s = skrollr.init({
-                                                        render: function(data) {
-                                                            //Debugging - Log the current scroll position.
-                                                            //console.log(data.curTop);
-                                                        }
-                                                    });
-                                                })(jQuery);*/
+        // Init Skrollr
+        var s = skrollr.init({
+            render: function(data) {
+                //Debugging - Log the current scroll position.
+                //console.log(data.curTop);
+            }
+        });
+    })(jQuery);*/
 
     function setBodyHeight() {
         $('body').css('height', $('html').css('height'));
