@@ -1,4 +1,4 @@
-$('.faq-arrow').on('click', function() {
+/*$('.faq-arrow').on('click', function() {
     var $faqContainer = $(this).closest('.faq-container');
     var answerHeight = $faqContainer.find('.faq-a').css("height");
     var boxHeight = $faqContainer.find('.faq-box').css("height");
@@ -22,4 +22,4 @@ $('.faq-arrow').on('click', function() {
             });
         });
     }
-});
+});*/

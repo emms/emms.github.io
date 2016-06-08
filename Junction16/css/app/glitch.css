@@ -1,9 +1,17 @@
+.buzz-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
 .buzz_wrapper {
     position: relative;
-    width: 700px;
+    width: 660px;
     margin: 0 auto;
     padding: 0;
     text-align: left;
+    opacity: 0;
 }
 
 .scanline {
@@ -19,8 +27,8 @@
 .buzz_wrapper span {
     position: absolute;
     /*-webkit-filter: blur(1px);*/
-    font-size: 75px;
-    font-family: 'Neou', fixed;
+    font-size: 70px;
+    font-family: 'Hack', fixed;
     font-weight: bold;
     line-height: 1.3;
 }
