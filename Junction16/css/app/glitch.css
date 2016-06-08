@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Hack-Regular;
+    src: url(../../font/Hack-Regular.ttf);
+}
+
 .buzz-container {
     position: absolute;
     top: 50%;
@@ -28,7 +33,7 @@
     position: absolute;
     /*-webkit-filter: blur(1px);*/
     font-size: 70px;
-    font-family: 'Hack', fixed;
+    font-family: 'Hack-Regular', fixed;
     font-weight: bold;
     line-height: 1.3;
 }
