@@ -143,7 +143,6 @@ b {
     width: 100%;
     position: absolute;
     bottom: -300px;
-    text-align: center;
 }
 
 .footer p {
@@ -154,15 +153,29 @@ b {
     margin-top: 30px;
 }
 
-.footer-logo-txt {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+.footer-cont {
+    padding-top: 40px;
+}
+
+.footer-logo {
+    width: 90px;
+    display: inline-block;
+}
+
+.footer-rightcol {
+    text-align: right;
+}
+
+.footer-txt {
+    display: inline-block;
+    width: 80%;
+    font-size: 17px;
+    vertical-align: middle;
+    margin-left: 10px;
 }
 
 .footer-links {
     margin: 0 auto;
-    padding-top: 30px;
 }
 
 .footer-links i {
@@ -174,6 +187,15 @@ b {
 .footer-links i:hover {
     color: black;
     cursor: pointer;
+}
+
+.aaltoes-logo {
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 
 #skrollr-body {
@@ -207,6 +229,10 @@ b {
 
 .margin0 {
     margin: 0;
+}
+
+.paddingtop30 {
+    padding-top: 30px;
 }
 
 .main-logo {
@@ -399,10 +425,14 @@ b {
         width: 100%;
     }
     .box-1-height,
+    .box-1-5-height,
     .box-2-height,
     .box-3-height,
     .box-4-height {
         height: 35vh;
+    }
+    .box-1-5-height {
+        padding-top: 6px;
     }
     .track-row-padding {
         padding-top: 0 !important;
@@ -426,6 +456,12 @@ b {
     .stat-container1 {
         margin-top: 30px;
     }
+    .track-header {
+        font-size: 20px !important;
+    }
+    .footer-rightcol {
+        text-align: center !important;
+    }
 }
 
 .dark-overlay {
@@ -442,6 +478,16 @@ b {
 
 .topmargin50 {
     margin-top: 50px;
+}
+
+.text-content {
+    overflow: hidden;
+}
+
+.about-btn {
+    width: 96% !important;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .button {
@@ -536,10 +582,24 @@ input:focus {
 .track-box {
     display: inline-block;
     margin: 0 3px;
+    position: relative;
 }
 
 .track-row-padding {
     padding-top: 4px;
+}
+
+.track-header {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #FFF;
+    font-size: 40px;
+    text-align: right;
+}
+
+.track-header.track-header-smaller {
+    font-size: 20px;
 }
 
 
@@ -620,6 +680,21 @@ input:focus {
     padding-top: 30px;
 }
 
+.quote-txt {
+    display: inline;
+}
+
+.quotationmark {
+    font-size: 80px;
+    line-height: 0;
+    margin-top: 15px;
+    color: #FFF;
+    vertical-align: middle;
+}
+
+
+/*QUOTE END*/
+
 .back-button {
     color: #777;
     font-size: 30px;
@@ -628,4 +703,9 @@ input:focus {
 
 .fa-angle-double-left {
     color: #777;
+}
+
+.divider {
+    border-bottom: 2px solid #777;
+    margin-bottom: 30px;
 }
