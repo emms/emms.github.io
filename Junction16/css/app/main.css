@@ -5,7 +5,7 @@ html {
 
 body {
     background-color: black;
-    font-family: Hack-Regular;
+    font-family: 'Montserrat', sans-serif;
     -webkit-font-smoothing: antialiased;
     margin-bottom: 300px;
     position: relative;
@@ -34,14 +34,24 @@ h1 {
 }
 
 h2 {
-    font-family: Hack-Bold;
-    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
     line-height: 1.2;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 32px;
 }
 
 h2,
-p {
+h3,
+h4 {
     color: #FFF;
+}
+
+p {
+    color: #BBB;
 }
 
 a:hover {
@@ -50,6 +60,7 @@ a:hover {
 
 main {
     height: 100%;
+    overflow: hidden;
 }
 
 b {
@@ -58,6 +69,10 @@ b {
 
 .hide {
     display: none;
+}
+
+.cyan-txt {
+    color: #5bc8d7;
 }
 
 .nav-logo-black {
@@ -127,7 +142,11 @@ b {
 }
 
 .footer p {
-    color: black;
+    color: #777;
+}
+
+.footer-contact {
+    margin-top: 30px;
 }
 
 .footer-logo-txt {
@@ -173,6 +192,14 @@ b {
     z-index: 100;
 }
 
+.frontpage-txt {
+    font-family: Hack-Regular;
+    letter-spacing: 5px;
+    color: #888;
+    font-size: 1.5em;
+    margin-bottom: 5vh;
+}
+
 .margin0 {
     margin: 0;
 }
@@ -181,6 +208,7 @@ b {
     width: 30%;
     display: block;
     margin: 0 auto;
+    margin: 0 auto 3vh auto;
 }
 
 .main-logo-txt {
@@ -202,10 +230,6 @@ b {
     width: 100%;
     vertical-align: middle;
     display: none;
-}
-
-.main-logo {
-    margin: 0 auto 7vh auto;
 }
 
 .main-header {
@@ -238,6 +262,10 @@ b {
     padding: 15% 0 0 0;
 }
 
+.lowest-section {
+    padding-bottom: 15%;
+}
+
 .section-identifier {
     float: left;
     position: absolute;
@@ -253,12 +281,18 @@ b {
 }
 
 .section-heading {
-    margin-bottom: 10vh;
-    background-color: #fff;
-    color: black;
-    display: inline-block;
-    padding: 10px 20px;
+    display: block;
+    padding: 10px 0;
     letter-spacing: 50;
+    font-weight: bold;
+    text-align: right;
+}
+
+.heading-line {
+    border-bottom: 2px solid #777;
+    width: 50px;
+    float: right;
+    margin-top: 30px;
 }
 
 .section-txt {
@@ -281,6 +315,12 @@ b {
 
 .section-left {
     padding-right: 5%;
+}
+
+.white-thick-border {
+    border: 6px solid white;
+    overflow: hidden;
+    padding: 30px;
 }
 
 #bg-video {
@@ -309,7 +349,7 @@ b {
     margin-left: -5px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .fullscreen-bg-video {
         display: none;
     }
@@ -319,10 +359,8 @@ b {
     #video-wrap {
         background-color: black;
     }
-    .main-logo-txt {
-        width: 250px;
-        display: block;
-        margin: 0 auto;
+    .main-logo {
+        width: 80vw;
     }
     .navbar-brand {
         display: none !important;
@@ -340,6 +378,19 @@ b {
     .navbar li a:hover:before,
     .navbar li a:focus:before {
         border-bottom: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .videoWrapper {
+        padding-bottom: 56.25%;
+        margin-top: 30px;
+    }
+    .videoWrapper iframe {
+        height: 100%;
+    }
+    .lastyear-intro {
+        margin-top: 30px;
     }
 }
 
@@ -365,6 +416,7 @@ b {
     display: inline-block;
     cursor: pointer;
     transition: 0.5s background-color;
+    margin-top: 30px;
 }
 
 .button:hover {
@@ -381,10 +433,6 @@ b {
     background-image: url('../../img/about_img.jpg');
     background-size: contain;
     /*position: relative;*/
-}
-
-.push {
-    height: 300px;
 }
 
 @media only screen and (max-width: 780px) {
@@ -485,10 +533,40 @@ input:focus {
 }
 
 .track-box {
-    height: 200px;
-    margin: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+}
+
+
+/* LAST YEAR */
+
+.white-box {
+    width: 65px;
+    height: 65px;
+    display: inline-block;
+    background-color: #FFF;
+}
+
+.stat-container {
+    margin-top: 10px;
+}
+
+.stat-texts {
+    display: inline-block;
+    position: absolute;
+    margin: -10px 0 0 10px;
+}
+
+.videoWrapper {
+    position: relative;
+    height: 0;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 
@@ -497,7 +575,7 @@ input:focus {
 .faq-a {}
 
 .faq-box {
-    border: 2px solid #dc5a26;
+    border: 2px solid #5bc8d7;
     padding: 20px;
     position: relative;
     margin-top: 15px;
@@ -523,4 +601,16 @@ input:focus {
 .faq-arrow:hover {
     cursor: pointer;
     color: #5bc8d7;
+}
+
+
+/* QUOTE */
+
+.quote-line {
+    border-bottom: 2px solid #777;
+    width: 300px;
+}
+
+.quote-source {
+    padding-top: 30px;
 }
