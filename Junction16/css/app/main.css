@@ -64,7 +64,7 @@ main {
 }
 
 b {
-    font-family: Hack-Bold;
+    font-weight: bold;
 }
 
 .hide {
@@ -379,6 +379,35 @@ b {
     .navbar li a:focus:before {
         border-bottom: 0;
     }
+    .navbar li a:hover,
+    .navbar li a:focus {
+        background-color: transparent;
+        color: white;
+    }
+    .navbar li.active a {
+        color: white;
+    }
+    .box-1-width,
+    .box-2-width,
+    .box-3-width,
+    .box-4-width {
+        width: 100%;
+    }
+    .box-1-height,
+    .box-2-height,
+    .box-3-height,
+    .box-4-height {
+        height: 35vh;
+    }
+    .track-row-padding {
+        padding-top: 0 !important;
+    }
+    .track-box {
+        margin: 0 !important;
+    }
+    .faq-sect {
+        padding: 0;
+    }
 }
 
 @media (max-width: 992px) {
@@ -525,7 +554,7 @@ input:focus {
 /* TRACKS */
 
 .tracks-heading {
-    /*text-align: center;*/
+    margin-top: 20%;
 }
 
 .grey-bg {
@@ -534,7 +563,11 @@ input:focus {
 
 .track-box {
     display: inline-block;
-    margin: 5px;
+    margin: 0 3px;
+}
+
+.track-row-padding {
+    padding-top: 3px;
 }
 
 
