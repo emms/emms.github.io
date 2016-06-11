@@ -1,4 +1,4 @@
-if (window.innerWidth > 480) {
+/*if (window.innerWidth > 480) {
     $(".main-logo").hover(
         function() {
             //if ($(".main-logo").css('opacity') === 1) {
@@ -23,7 +23,7 @@ if (window.innerWidth > 480) {
             //}
         }
     );
-}
+}*/
 /*
 $(".buzz_wrapper").hover(
     function() {

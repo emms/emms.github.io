@@ -108,7 +108,7 @@
                         </div>
                         <h5 class="frontpage-txt">NOVEMBER 25-27, 2016    HELSINKI, FINLAND</h5>
                         <div class="button" style="margin: 0;">
-                            <p>PRE-REGISTER</p>
+                            <a>PRE-REGISTER</a>
                         </div>
                     </div>
                 </div>
@@ -135,10 +135,10 @@
                         </div>
                     </div>
                     <div class="button" style="margin-right:30px;">
-                        <p>SIGN UP</p>
+                        <a>SIGN UP</a>
                     </div>
                     <div class="button">
-                        <p>LAST YEAR</p>
+                        <a>LAST YEAR</a>
                     </div>
                 </div>
             </div>
@@ -206,8 +206,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <p class="lastyear-intro">Lorem ipsum Laboris sunt Excepteur proident dolor laborum in magna officia amet et deserunt incididunt dolor aliquip tempor eu adipisicing labore in elit cillum in labore ad Duis eu proident mollit ullamco laborum. Lorem ipsum Aute qui ex irure in cupidatat sunt tempor sed in consectetur cillum consequat laboris nulla.</p>
-                        <div class="stat-container">
+                        <div class="stat-container1">
                             <div class="white-box"></div>
                             <div class="stat-texts">
                                 <h4 class="cyan-txt">559 Developers</h4>
@@ -239,7 +238,7 @@
                         Lorem ipsum Amet id non anim culpa elit aliquip magna proident magna adipisicing et ut cillum anim ullamco deserunt in mollit laborum elit fugiat pariatur dolor enim. Lorem ipsum Cupidatat proident Excepteur qui voluptate non ex non dolor irure enim dolore culpa eu labore dolore pariatur sint laboris mollit qui Ut laboris enim in amet aliqua sit non in do elit non amet deserunt in sit cupidatat nisi exercitation est nostrud eu ea ex sint minim enim pariatur Excepteur labore dolor est non et commodo deserunt id proident commodo quis veniam consectetur dolor et ad amet commodo in occaecat reprehenderit officia magna cupidatat dolor labore nostrud
                     </p>
                     <div class="button">
-                        <p>BUTTON TEXT</p>
+                        <a>BUTTON TEXT</a>
                     </div>
                 </div>
                 <div class="col-md-7 videoWrapper col-sm-12">
@@ -395,6 +394,14 @@
         sectionHeights();
         boxHeights();
         calculateTrackBoxHeights();
+        $('.button').hover(
+            function() {
+                $(this).find('a').css('color', 'black');
+            },
+            function() {
+                $(this).find('a').css('color', '#5bc8d7');
+            }
+        );
         $(this).on('scroll', function() {
             if ($(window).scrollTop() === 0) {
                 $('.navbar').addClass('navtop');
