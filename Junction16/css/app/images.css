@@ -7,3 +7,43 @@
 .img-1 {
 	background-image: url('../../img/48hours.jpg');
 }
+
+.vr-img {
+	background-image: url('../../img/vr.jpg');
+}
+
+.cybersecurity-img {
+	background-image: url('../../img/cybersecurity.jpg');
+}
+
+.iot-img {
+	background-image: url('../../img/IOT.jpg');
+}
+
+.fintech-img {
+	background-image: url('../../img/fintech.jpg');
+}
+
+.futuremobility-img {
+	background-image: url('../../img/futuremobility.jpg');
+}
+
+.buildings-img {
+	background-image: url('../../img/intelligentbuildings.jpg');
+}
+
+.healthtech-img {
+	background-image: url('../../img/healthtech.jpg');
+}
+
+.gaming-img {
+	background-image: url('../../img/gaming.png');
+}
+
+.adtech-img {
+	background-image: url('../../img/adtech.jpg');
+}
+
+.ecommerce-img {
+	background-image: url('../../img/ecommerce.jpg');
+}

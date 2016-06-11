@@ -619,3 +619,13 @@ input:focus {
 .quote-source {
     padding-top: 30px;
 }
+
+.back-button {
+    color: #777;
+    font-size: 30px;
+    vertical-align: text-bottom;
+}
+
+.fa-angle-double-left {
+    color: #777;
+}
