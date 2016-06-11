@@ -106,6 +106,7 @@ b {
     z-index: 1000;
     background: white;
     transition: 0.5s;
+    height: 40px;
 }
 
 .navbar li a:hover,
