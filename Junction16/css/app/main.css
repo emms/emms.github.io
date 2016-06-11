@@ -93,6 +93,11 @@ b {
     transition: 0.5s;
 }
 
+.navbar.navtop li a:hover,
+.navbar.navtop li a:focus {
+    color: #FFF;
+}
+
 .navbar {
     border: none;
     border-radius: 0;
@@ -515,39 +520,6 @@ input:focus {
     transition: background-color 0.5s;
     background-color: #dc5a26;
     cursor: pointer;
-}
-
-#mc_embed_signup .mc-field-group,
-#mc_embed_signup .mc-responses,
-#mc_embed_signup .clear {
-    display: inline;
-}
-
-.overlay {
-    left: 0;
-    top: 0;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, .8);
-    z-index: 200;
-    cursor: pointer;
-    display: none;
-}
-
-.overlay-video {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-    z-index: 201;
-}
-
-@media only screen and (max-width: 560px) {
-    .overlay-video iframe {
-        width: 90vw;
-    }
 }
 
 

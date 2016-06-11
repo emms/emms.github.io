@@ -128,9 +128,9 @@
                         </div>
                         <div class="row margin0">
                             <p class="section-txt">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Held annually in the cold and slushy Helsinki of late November, Junction is a converging point for developers, designers, and entrepreneurs alike to let go of their inhibitions and create cool inspiring projects.
                                 <br>
-                                <br> Lorem ipsum Excepteur esse est Duis tempor aliqua in cillum ad consectetur enim exercitation eiusmod consequat ad anim ea anim anim occaecat proident aliquip. Lorem ipsum Enim cillum laboris labore Duis commodo ea ullamco Ut labore in ea laboris occaecat anim adipisicing aute anim dolore culpa laboris occaecat consequat irure aliqua in anim culpa eu pariatur officia dolor exercitation dolor.
+                                <br> What happens when you combine the most ambitious hackers with the best hardware and industry partners for 48 hours? The innovations of tomorrow are born.
                             </p>
                         </div>
                     </div>
@@ -235,7 +235,9 @@
                 </div>
                 <div class="col-md-5" style="padding:0;">
                     <p class="section-txt">
-                        Lorem ipsum Amet id non anim culpa elit aliquip magna proident magna adipisicing et ut cillum anim ullamco deserunt in mollit laborum elit fugiat pariatur dolor enim. Lorem ipsum Cupidatat proident Excepteur qui voluptate non ex non dolor irure enim dolore culpa eu labore dolore pariatur sint laboris mollit qui Ut laboris enim in amet aliqua sit non in do elit non amet deserunt in sit cupidatat nisi exercitation est nostrud eu ea ex sint minim enim pariatur Excepteur labore dolor est non et commodo deserunt id proident commodo quis veniam consectetur dolor et ad amet commodo in occaecat reprehenderit officia magna cupidatat dolor labore nostrud
+                        Organized by 100% student run Aalto Entrepreneurship Society, Junction was built to inspire and foster a community of creators and give them a hackathon experience like no other.
+                        <br>
+                        <br> In 2015 Junction gathered 559 hackers from over 30 countries and let them hack on 8 different tracks and 36 different API’s for a total of 26 different prize categories and a €20,000 grand prize.
                     </p>
                     <div class="button">
                         <a>BUTTON TEXT</a>
@@ -328,15 +330,8 @@
     <script type="text/javascript" src="js/app/faq.js"></script>
     <script type="text/javascript" src="js/app/logochange.js"></script>
     <script type="text/javascript" src="js/app/calculateTrackBoxHeights.js"></script>
+    <script type="text/javascript" src="js/app/sectionHeights.js"></script>
     <script type="text/javascript">
-    function sectionHeights() {
-        var sectionHeight = parseInt($('.text-content').outerHeight(true)) + 'px';
-        $('.section-img').css('height', sectionHeight);
-        console.log(sectionHeight);
-    }
-
-
-
     $.preloadImages = function() {
         for (var i = 0; i < arguments.length; i++) {
             $("<img />").attr("src", arguments[i]);
@@ -345,54 +340,15 @@
 
     $.preloadImages('img/logo_nogrunge.png', 'img/about_img.jpg', 'img/48hours.jpg', 'img/junction_logo.png', 'img/junction_logo_black.png');
 
-    $('.aftermovie').on('click', function() {
-        $('.overlay').fadeIn();
-        $('.overlay-video').fadeIn();
-    });
-
-    $('.overlay').on('click', function() {
-        $('.overlay').fadeOut();
-        $('.overlay-video').fadeOut();
-    });
-
     $(window).resize(function() {
-        boxHeights();
         sectionHeights();
         calculateTrackBoxHeights();
     });
-
-    function boxHeights() {
-        $('.square').each(function() {
-            $(this).css("height", $(this).css("width"));
-        });
-
-        $('.rectangle').each(function() {
-            $(this).css("height", parseFloat($(this).css("width")) / 2 + 'px');
-        });
-    }
-
-    function isElementInViewport(el) {
-
-        //special bonus for those using jQuery
-        if (typeof jQuery === "function" && el instanceof jQuery) {
-            el = el[0];
-        }
-
-        var rect = el.getBoundingClientRect();
-
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
-        );
-    }
 
     $(window).load(function() {
         $('.nav-logo-black').hide();
         $('#bg-video').backgroundVideo();
         sectionHeights();
-        boxHeights();
         calculateTrackBoxHeights();
         $('.button').hover(
             function() {
