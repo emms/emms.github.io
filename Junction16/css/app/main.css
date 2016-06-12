@@ -441,9 +441,9 @@ b {
     .track-box {
         margin: 0 !important;
     }
-    .faq-sect {
+    /*.faq-sect {
         padding: 0;
-    }
+    }*/
 }
 
 @media (max-width: 992px) {
@@ -582,12 +582,12 @@ input:focus {
 
 .track-box {
     display: inline-block;
-    margin: 0 3px;
+    margin: 0 6px;
     position: relative;
 }
 
 .track-row-padding {
-    padding-top: 4px;
+    padding-top: 9px;
 }
 
 .track-header {
