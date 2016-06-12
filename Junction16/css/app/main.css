@@ -171,7 +171,7 @@ b {
     display: inline-block;
     width: 80%;
     font-size: 17px;
-    vertical-align: middle;
+    vertical-align: -webkit-baseline-middle;
     margin-left: 10px;
 }
 
@@ -294,6 +294,14 @@ b {
     padding: 15% 0 0 0;
 }
 
+.section-less-padding {
+    padding: 5% 0 0 0;
+}
+
+.section-medium-padding {
+    padding: 8% 0 0 0;
+}
+
 .lowest-section {
     padding-bottom: 15%;
 }
@@ -350,7 +358,7 @@ b {
 }
 
 .white-thick-border {
-    border: 6px solid white;
+    border: 10px solid white;
     overflow: hidden;
     padding: 30px;
 }
@@ -444,6 +452,10 @@ b {
     /*.faq-sect {
         padding: 0;
     }*/
+    #faq {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -462,6 +474,13 @@ b {
     }
     .footer-rightcol {
         text-align: center !important;
+    }
+    .faq-sect-right,
+    .faq-sect-left {
+        padding: initial !important;
+    }
+    .upper-faq-box {
+        margin-top: 20px !important;
     }
 }
 
@@ -486,9 +505,17 @@ b {
 }
 
 .about-btn {
-    width: 96% !important;
+    width: 100% !important;
     text-align: center;
     margin: 0 auto;
+}
+
+.about-btn-left-padding {
+    padding: 0 3% 0 0;
+}
+
+.about-btn-right-padding {
+    padding: 0 0 0 3%;
 }
 
 .button {
@@ -582,12 +609,12 @@ input:focus {
 
 .track-box {
     display: inline-block;
-    margin: 0 6px;
+    margin: 0 10px;
     position: relative;
 }
 
 .track-row-padding {
-    padding-top: 9px;
+    padding-top: 18px;
 }
 
 .track-header {
@@ -617,6 +644,10 @@ input:focus {
     margin-top: 10px;
 }
 
+.stats {
+    margin-top: 50px;
+}
+
 .stat-texts {
     display: inline-block;
     position: absolute;
@@ -644,7 +675,7 @@ input:focus {
     border: 2px solid #5bc8d7;
     padding: 20px;
     position: relative;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .faq-box p {
@@ -667,6 +698,18 @@ input:focus {
 .faq-arrow:hover {
     cursor: pointer;
     color: #5bc8d7;
+}
+
+.upper-faq-box {
+    margin-top: 0;
+}
+
+.faq-sect-left {
+    padding-right: 10px;
+}
+
+.faq-sect-right {
+    padding-left: 10px;
 }
 
 
