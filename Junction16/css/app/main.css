@@ -456,6 +456,9 @@ b {
         padding-left: 15px;
         padding-right: 15px;
     }
+    .button {
+        padding: 10px 15px !important;
+    }
 }
 
 @media (max-width: 992px) {
@@ -562,6 +565,10 @@ b {
     }
     .logo-txt {
         display: none;
+    }
+    .about-btn-left-padding,
+    .about-btn-right-padding {
+        padding: 0 !important;
     }
 }
 
@@ -726,6 +733,11 @@ input:focus {
 
 .quote-txt {
     display: inline;
+}
+
+.quote-txt:hover {
+    border-bottom: 2px solid white;
+    cursor: pointer;
 }
 
 .quotationmark {
