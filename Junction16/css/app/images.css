@@ -6,45 +6,110 @@
 }
 
 .img-1 {
-	background-image: url('../../img/48hours.jpg');
+    background-image: url('../../img/48hours.jpg');
 }
 
 .vr-img {
-	background-image: url('../../img/vr.jpg');
+    background-image: url('../../img/vr.jpg');
 }
 
 .cybersecurity-img {
-	background-image: url('../../img/cybersecurity.jpg');
+    background-image: url('../../img/cybersecurity.jpg');
 }
 
 .iot-img {
-	background-image: url('../../img/IOT.jpg');
+    background-image: url('../../img/IOT.jpg');
 }
 
 .fintech-img {
-	background-image: url('../../img/fintech.jpg');
+    background-image: url('../../img/fintech.jpg');
 }
 
 .futuremobility-img {
-	background-image: url('../../img/futuremobility.jpg');
+    background-image: url('../../img/futuremobility.jpg');
 }
 
 .buildings-img {
-	background-image: url('../../img/intelligentbuildings.jpg');
+    background-image: url('../../img/intelligentbuildings.jpg');
 }
 
 .healthtech-img {
-	background-image: url('../../img/healthtech.jpg');
+    background-image: url('../../img/healthtech.jpg');
 }
 
 .gaming-img {
-	background-image: url('../../img/gaming.png');
+    background-image: url('../../img/gaming.png');
 }
 
 .adtech-img {
-	background-image: url('../../img/adtech.jpg');
+    background-image: url('../../img/adtech.jpg');
 }
 
 .ecommerce-img {
-	background-image: url('../../img/ecommerce.jpg');
+    background-image: url('../../img/ecommerce.jpg');
+}
+
+.partner-logo {
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 140px;
+    margin-top: 40px;
+    padding: 15px;
+}
+
+.futurice {
+    background-image: url('../../img/logos/futurice.svg');
+}
+
+.reaktor {
+    background-image: url('../../img/logos/reaktor.png');
+}
+
+.supercell {
+    background-image: url('../../img/logos/supercell.png');
+}
+
+.ibm {
+    background-image: url('../../img/logos/ibm.svg');
+}
+
+.uber {
+    background-image: url('../../img/logos/uber.png');
+}
+
+.nvidia {
+    background-image: url('../../img/logos/nvidia.png');
+}
+
+.klarna {
+    background-image: url('../../img/logos/klarna.svg');
+}
+
+.microsoft {
+    background-image: url('../../img/logos/microsoft.png');
+}
+
+.unity {
+    background-image: url('../../img/logos/unity.png');
+}
+
+.shopify {
+    background-image: url('../../img/logos/shopify.png');
+}
+
+.finnair {
+    background-image: url('../../img/logos/finnair.png');
+}
+
+.mlh {
+	background-image: url('../../img/logos/mlh-logo.svg');
+}
+
+@media (max-width: 992px) {
+    .partner-logo {
+        margin-top: 0 !important;
+        height: 125px !important;
+    }
 }

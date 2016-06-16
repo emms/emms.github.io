@@ -69,8 +69,8 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <a class="navbar-brand">
-                                <img class="nav-logo-black" src="img/junction_logo_black.png" style="width:170px;">
-                                <img class="nav-logo-white" src="img/junction_logo.png" style="width:170px;">
+                                <img class="nav-logo-black" src="img/junction_logo_black.png">
+                                <img class="nav-logo-white" src="img/junction_logo.png">
                             </a>
                         </div>
                         <div class="collapse navbar-collapse" id="nav-collapse">
@@ -79,6 +79,7 @@
                                 <li><a href="#tracks">TRACKS</a></li>
                                 <li><a href="#lastyear">LAST YEAR</a></li>
                                 <li><a href="#faq">FAQ</a>
+                                    <li><a href="#partners" style="padding-right: 0;">PARTNERS</a>
                             </ul>
                         </div>
                     </div>
@@ -98,22 +99,29 @@
                     <!-- TODO: MAKE LOGO CORRECT (SMALL) SIZE -->
                     <div>
                         <img class="main-logo" src="img/logo_main.svg">
-                        <div class="buzz-container">
+                        <!--<div class="buzz-container">
                             <div class="buzz_wrapper">
                                 <div class="text">
                                     <span>HACK THE FUTURE</span>
                                 </div>
                                 <div class="scanline"></div>
                             </div>
-                        </div>
+                        </div>-->
                         <h5 class="frontpage-txt hidden-xs">NOVEMBER 25-27, 2016 &nbsp; &nbsp;HELSINKI, FINLAND</h5>
                         <h5 class="frontpage-txt visible-xs">NOVEMBER 25-27, 2016 HELSINKI, FINLAND</h5>
-                        <div class="button" style="margin: 0;">
+                        <!--<div class="button" style="margin: 0;">
                             <a href="typeform.html">PRE-REGISTER</a>
+                        </div>-->
+                        <div class="button aftermovie" style="margin: 0;">
+                            <p>JUNCTION 2015 RECAP</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="overlay"></div>
+        <div class="overlay-video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/osZit7cuaMI" frameborder="0" allowfullscreen></iframe>
         </div>
         <div id="about" class="col-xs-12 section">
             <div class="hidden-xs hidden-sm col-md-5 col-md-offset-1 section-img content-img img-1">
@@ -135,12 +143,19 @@
                             </p>
                         </div>
                     </div>
+                    <!--
                     <div class="col-xs-12 col-sm-6 about-btn-left-padding">
                         <div class="button about-btn prereg-btn">
                             <a href="typeform.html">PRE-REGISTER</a>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-6 about-btn-right-padding">
+                        <div class="button about-btn">
+                            <a href="#lastyear">LAST YEAR</a>
+                        </div>
+                    </div>-->
+                    <div class="col-sm-2 hidden-xs "></div>
+                    <div class="col-xs-12 col-sm-8 lastyear-btn-container">
                         <div class="button about-btn">
                             <a href="#lastyear">LAST YEAR</a>
                         </div>
@@ -169,7 +184,7 @@
         <div id="tracks" class="col-xs-12 section-less-padding">
             <div class="col-sm-10 col-sm-offset-1 track-section">
                 <div class="row margin0 track-row-padding" style="padding-bottom:5px;">
-                    <div class="white-thick-border box-2-width track-box box-1-5-height" style="vertical-align:bottom">
+                    <div class="white-thick-border box-2-width track-box box-1-5-height track-heading-box">
                         <div class="tracks-heading">
                             <div class="row margin0">
                                 <div class="heading-line"></div>
@@ -256,7 +271,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="" style="margin:30px 0;">
+                <div class="lastyear-subheading">
                     <div class="quote-line"></div>
                     <h2>Junction 2015</h2>
                 </div>
@@ -343,9 +358,133 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" style="text-align:center; margin-top:30px;">
+                <div class="row faq-more-button-container">
                     <div class="button">
                         <a href="faq.html">MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="partners" class="col-xs-12 section">
+            <div class="col-sm-10 col-sm-offset-1">
+                <div class="row partner-heading-row">
+                    <div class="col-md-6 hidden-xs hidden-sm">
+                        <div class="white-thick-border" style="visibility:hidden;">
+                            <div class="row margin0">
+                                <div class="heading-line"></div>
+                            </div>
+                            <div class="row margin0">
+                                <h2 class="section-heading">PARTNERS</h2>
+                            </div>
+                        </div>
+                        <div class="partners-txt">
+                            <h4>Check out some of our sponsors from last year. <br>2016 sponsors to be announced soon!</h4>
+                            <h4>Want to see your logo here? Contact us at <span class="cyan-txt">eero.kettunen@aaltoes.com</span> for partnerships.</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="white-thick-border">
+                            <div class="row margin0">
+                                <div class="heading-line"></div>
+                            </div>
+                            <div class="row margin0">
+                                <h2 class="section-heading">PARTNERS</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="partners-txt-sm visible-sm visible-xs">
+                    <h4>Check out some of our sponsors from last year. 2016 sponsors to be announced soon!</h4>
+                    <h4>Want to see your logo here? Contact us at <span class="cyan-txt">eero.kettunen@aaltoes.com</span> for partnerships.</h4>
+                </div>
+                <div class="row hidden-xs first-partner-row">
+                    <div class="col-sm-3">
+                        <div class="partner-logo mlh" style="margin-top:55px;"></div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="partner-logo ibm"></div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="partner-logo uber"></div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="partner-logo futurice"></div>
+                    </div>
+                </div>
+                <div class="row hidden-xs">
+                    <div class="col-sm-3">
+                        <div class="partner-logo reaktor"></div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="partner-logo unity"></div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="partner-logo nvidia"></div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="partner-logo supercell"></div>
+                    </div>
+                </div>
+                <div class="row hidden-xs">
+                    <div class="col-sm-3">
+                        <div class="partner-logo klarna"></div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="partner-logo shopify"></div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="partner-logo finnair"></div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="partner-logo microsoft"></div>
+                    </div>
+                </div>
+                <div class="row visible-xs first-xs-partner-row">
+                    <div class="col-xs-6">
+                        <div class="partner-logo mlh"></div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="partner-logo ibm"></div>
+                    </div>
+                </div>
+                <div class="row visible-xs">
+                    <div class="col-xs-6">
+                        <div class="partner-logo uber"></div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="partner-logo futurice"></div>
+                    </div>
+                </div>
+                <div class="row visible-xs">
+                    <div class="col-xs-6">
+                        <div class="partner-logo reaktor"></div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="partner-logo unity"></div>
+                    </div>
+                </div>
+                <div class="row visible-xs">
+                    <div class="col-xs-6">
+                        <div class="partner-logo nvidia"></div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="partner-logo supercell"></div>
+                    </div>
+                </div>
+                <div class="row visible-xs">
+                    <div class="col-xs-6">
+                        <div class="partner-logo klarna"></div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="partner-logo shopify"></div>
+                    </div>
+                </div>
+                <div class="row visible-xs">
+                    <div class="col-xs-6">
+                        <div class="partner-logo finnair"></div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="partner-logo microsoft"></div>
                     </div>
                 </div>
             </div>
@@ -437,9 +576,11 @@
         $('.button').hover(
             function() {
                 $(this).find('a').css('color', 'black');
+                $(this).find('p').css('color', 'black');
             },
             function() {
                 $(this).find('a').css('color', '#5bc8d7');
+                $(this).find('p').css('color', '#5bc8d7');
             }
         );
         $(this).on('scroll', function() {
@@ -454,10 +595,16 @@
                 $('.nav-logo-white').fadeOut().promise().done(function() {
                     $('.nav-logo-black').fadeIn();
                 });
-
-
             }
+        });
+        $('.aftermovie').on('click', function() {
+            $('.overlay').fadeIn();
+            $('.overlay-video').fadeIn();
+        });
 
+        $('.overlay').on('click', function() {
+            $('.overlay').fadeOut();
+            $('.overlay-video').fadeOut();
         });
     });
     </script>

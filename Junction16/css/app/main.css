@@ -77,6 +77,11 @@ b {
 
 .nav-logo-black {
     z-index: 100000;
+    width: 170px;
+}
+
+.nav-logo-white {
+    width: 170px;
 }
 
 .navbar-collapse {
@@ -124,6 +129,7 @@ b {
     text-decoration: none;
     color: grey;
     transition: 0.5s;
+    padding: 15px 7px;
 }
 
 .navbar li.active a {
@@ -389,6 +395,33 @@ b {
     margin-left: -5px;
 }
 
+.overlay {
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    z-index: 200;
+    cursor: pointer;
+    display: none;
+}
+
+.overlay-video {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 201;
+}
+
+@media only screen and (max-width: 560px) {
+    .overlay-video iframe {
+        width: 90vw;
+    }
+}
+
 @media (max-width: 768px) {
     .fullscreen-bg-video {
         display: none;
@@ -485,6 +518,9 @@ b {
     .upper-faq-box {
         margin-top: 20px !important;
     }
+    .lastyear-btn-container {
+        padding: 0 !important;
+    }
 }
 
 .dark-overlay {
@@ -570,6 +606,9 @@ b {
     .about-btn-right-padding {
         padding: 0 !important;
     }
+    .track-heading-box {
+        min-height: 220px;
+    }
 }
 
 .subscription-container {
@@ -610,6 +649,10 @@ input:focus {
     margin-top: 20%;
 }
 
+.track-heading-box {
+    vertical-align: bottom;
+}
+
 .grey-bg {
     background-color: grey;
 }
@@ -645,6 +688,10 @@ input:focus {
     height: 65px;
     display: inline-block;
     background-color: #FFF;
+}
+
+.lastyear-subheading {
+    margin: 30px 0;
 }
 
 .stat-container {
@@ -719,6 +766,11 @@ input:focus {
     padding-left: 10px;
 }
 
+.faq-more-button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
 
 /* QUOTE */
 
@@ -749,7 +801,28 @@ input:focus {
 }
 
 
-/*QUOTE END*/
+/*PARTNERS*/
+
+.first-partner-row,
+.first-xs-partner-row {
+    margin-top: 30px;
+}
+
+.partner-heading-row {
+    position: relative;
+    overflow: hidden;
+}
+
+.partners-txt {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.partners-txt-sm {
+    margin-top: 30px;
+}
 
 .back-button {
     color: #777;
