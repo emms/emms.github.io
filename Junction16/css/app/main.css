@@ -41,7 +41,7 @@ h2 {
 }
 
 h3 {
-    font-size: 32px;
+    font-size: 30px;
 }
 
 h2,
@@ -121,7 +121,7 @@ b {
 }
 
 .navbar li {
-    font-size: 20px;
+    font-size: 16px;
     margin: 0 5px;
 }
 
@@ -170,15 +170,16 @@ b {
 }
 
 .footer-rightcol {
-    text-align: right;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .footer-txt {
     display: inline-block;
-    width: 80%;
-    font-size: 17px;
+    width: 75%;
+    font-size: 14px;
     vertical-align: -webkit-baseline-middle;
-    margin-left: 10px;
+    margin-left: 40px;
 }
 
 .footer-links {
@@ -189,6 +190,7 @@ b {
     padding: 0 10px;
     color: grey;
     transition: 0.5s;
+    font-size: 30px;
 }
 
 .footer-links i:hover {
@@ -197,7 +199,7 @@ b {
 }
 
 .aaltoes-logo {
-    width: 200px;
+    width: 175px;
     position: absolute;
     left: 50%;
     bottom: 20px;
@@ -240,6 +242,10 @@ b {
 
 .paddingtop30 {
     padding-top: 30px;
+}
+
+.paddingtop40 {
+    padding-top: 40px;
 }
 
 .main-logo {
@@ -501,6 +507,8 @@ b {
     }
     .videoWrapper iframe {
         height: 100%;
+        width: 100% !important;
+        margin-left: 0 !important;
     }
     .stat-container1 {
         margin-top: 30px;
@@ -510,6 +518,7 @@ b {
     }
     .footer-rightcol {
         text-align: center !important;
+        margin-top: 0 !important;
     }
     .faq-sect-right,
     .faq-sect-left {
@@ -711,13 +720,15 @@ input:focus {
 .videoWrapper {
     position: relative;
     height: 0;
+
 }
 
 .videoWrapper iframe {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 95%;
+    margin-left: 5%;
 }
 
 
@@ -797,7 +808,7 @@ input:focus {
     line-height: 0;
     margin-top: 15px;
     color: #FFF;
-    vertical-align: middle;
+    vertical-align: bottom;
 }
 
 
@@ -813,11 +824,8 @@ input:focus {
     overflow: hidden;
 }
 
-.partners-txt {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
+.partners-subheading {
+    margin-bottom: 30px;
 }
 
 .partners-txt-sm {
@@ -837,4 +845,10 @@ input:focus {
 .divider {
     border-bottom: 2px solid #777;
     margin-bottom: 30px;
+}
+
+@media screen and (min-width:992px) {
+    .videoWrapper {
+        margin-top: -100px;
+    }
 }
