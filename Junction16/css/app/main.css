@@ -244,15 +244,15 @@ b {
     padding-top: 30px;
 }
 
-.paddingtop40 {
-    padding-top: 40px;
+.paddingtop60 {
+    padding-top: 60px;
 }
 
 .main-logo {
     width: 30%;
     display: block;
     margin: 0 auto;
-    margin: 0 auto 3vh auto;
+    margin: 0 auto 5vh auto;
 }
 
 .main-logo-txt {
@@ -727,8 +727,8 @@ input:focus {
     position: absolute;
     top: 0;
     left: 0;
-    width: 95%;
-    margin-left: 5%;
+    width: 90%;
+    margin-left: 10%;
 }
 
 
