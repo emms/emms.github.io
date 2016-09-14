@@ -1,3 +1,5 @@
+$.backstretch("img/v2/bg_1.jpg");
+
 $(document).ready(function() {
 
     //smooth scrolling
