@@ -1,4 +1,4 @@
-$.backstretch("img/v2/bg_1.jpg");
+$.backstretch("img/v2/bg_1.jpg", {centeredY: false});
 
 $(document).ready(function() {
 
