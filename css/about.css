@@ -1,0 +1,17 @@
+.emmi-img {
+	width: 90%;
+	display: inline-block;
+}
+
+@media (max-width: 992px) {
+	.emmi-img {
+		margin-top: 50px;
+		width: 60%;
+	}
+}
+
+@media (max-width: 768px) {
+	.emmi-img {
+		width: 90%;
+	}
+}

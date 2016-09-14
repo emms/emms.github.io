@@ -1,0 +1,227 @@
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 65vh;
+    border-radius: 0;
+    padding: 10px;
+}
+
+.navbar li a {
+    font-family: 'Orator Std';
+    font-size: 24pt;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    padding-top: 20px;
+    transition: background-color 0.5s;
+}
+
+.navbar li {
+    padding: 0.5vw 1vw;
+}
+
+.navbar-bar {
+    text-align: center;
+    padding: 0;
+}
+
+.nav.navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar li a:hover,
+.navbar li a:focus {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.navbar-toggle {
+    border-radius: 50%;
+    height: 44px;
+    width: 44px;
+}
+
+.navbar-toggle:hover {
+    transform: scale(1.4);
+}
+
+.menu {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    height: 46px;
+    width: 46px;
+    transition: opacity 0.5s;
+    z-index: 1000;
+    /* to override bootstrap's hidden class */
+    display: block !important;
+}
+
+.menu-circle {
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 1000;
+}
+
+.menu:hover .menu-circle {
+    transform: scale(1.5);
+}
+
+.menu.open .menu-circle {
+    transform: scale(60);
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #000;
+}
+
+.navbar-brand {
+    text-transform: uppercase;
+    color: #000;
+    font-family: 'Orator Std';
+}
+
+.slash {
+    font-family: 'Orator Std';
+    font-size: 24pt;
+    color: #000;
+    vertical-align: sub;
+    margin-left: 2vw;
+}
+
+
+/* TODO TARKISTA BREAKPOINT */
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        display: none !important;
+    }
+    .navbar {
+        background: transparent;
+        top: 5%;
+        left: -5%;
+    }
+    .nav.navbar-nav {
+        text-align: right;
+        margin-right: -37%;
+    }
+    .navbar li a:hover:before,
+    .navbar li a:focus:before {
+        border-bottom: 0;
+    }
+    .menu {
+        top: 20px;
+        right: 20px;
+    }
+}
+
+.menu-link {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1002;
+    
+}
+
+.menu-icon {
+    position: absolute;
+    width: 20px;
+    height: 14px;
+    margin: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 1px;
+}
+
+.menu-line {
+    background-color: #333;
+    height: 2px;
+    width: 100%;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu-line-1 {
+    top: 0;
+}
+
+.menu-line-2 {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.menu-line-3 {
+    bottom: 0;
+}
+
+.menu.open .menu-line-1 {
+    transform: translateY(7px) translateY(-50%) rotate(-135deg);
+}
+
+.menu.open .menu-line-2 {
+    opacity: 0;
+}
+
+.menu.open .menu-line-3 {
+    transform: translateY(-7px) translateY(50%) rotate(135deg);
+}
+
+.menu-overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.03s;
+}
+
+.menu-overlay a {
+    font-family: 'Orator Std';
+    font-size: 26pt;
+    color: #000;
+    cursor: pointer;
+    margin-top: 30px;
+    display: inline-block;
+    transition: background-color 0.5s;
+    padding: 20px 20px 10px 20px;
+}
+
+.menu-overlay a:first-child {
+    margin-top: 0;
+}
+
+.menu-overlay a:hover, .menu-overlay a:focus {
+    background-color: rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.menu-slash {
+    vertical-align: -webkit-baseline-middle;
+}
+
+.menu-links-container {
+    display: inline-block;
+    width: 250px;
+}
