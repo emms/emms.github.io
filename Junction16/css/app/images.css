@@ -38,7 +38,7 @@
 }
 
 .gaming-img {
-    background-image: url('../../img/gaming.png');
+    background-image: url('../../img/gaming.jpg');
 }
 
 .adtech-img {
@@ -47,6 +47,10 @@
 
 .ecommerce-img {
     background-image: url('../../img/ecommerce.jpg');
+}
+
+.dde-img {
+    background-image: url('../../img/dde.jpg');
 }
 
 .partner-logo {
@@ -60,51 +64,51 @@
 }
 
 .futurice {
-    background-image: url('../../img/logos/futurice.svg');
+    background-image: url('../../logos/futurice.svg');
 }
 
 .reaktor {
-    background-image: url('../../img/logos/reaktor.png');
+    background-image: url('../../logos/reaktor.png');
 }
 
 .supercell {
-    background-image: url('../../img/logos/supercell.png');
+    background-image: url('../../logos/supercell.png');
 }
 
 .ibm {
-    background-image: url('../../img/logos/ibm.svg');
+    background-image: url('../../logos/ibm.svg');
 }
 
 .uber {
-    background-image: url('../../img/logos/uber.png');
+    background-image: url('../../logos/uber.png');
 }
 
 .nvidia {
-    background-image: url('../../img/logos/nvidia.png');
+    background-image: url('../../logos/nvidia.png');
 }
 
 .klarna {
-    background-image: url('../../img/logos/klarna.svg');
+    background-image: url('../../logos/klarna.svg');
 }
 
 .microsoft {
-    background-image: url('../../img/logos/microsoft.png');
+    background-image: url('../../logos/microsoft.png');
 }
 
 .unity {
-    background-image: url('../../img/logos/unity.png');
+    background-image: url('../../logos/unity.png');
 }
 
 .shopify {
-    background-image: url('../../img/logos/shopify.png');
+    background-image: url('../../logos/shopify.png');
 }
 
 .finnair {
-    background-image: url('../../img/logos/finnair.png');
+    background-image: url('../../logos/finnair.png');
 }
 
 .mlh {
-	background-image: url('../../img/logos/mlh-logo.svg');
+	background-image: url('../../logos/mlh-logo.svg');
 }
 
 @media (max-width: 992px) {

@@ -7,7 +7,7 @@ body {
     background-color: black;
     font-family: 'Montserrat', sans-serif;
     -webkit-font-smoothing: antialiased;
-    margin-bottom: 300px;
+    margin-bottom: 240px;
     position: relative;
     height: auto;
 }
@@ -145,11 +145,11 @@ b {
 }
 
 .footer {
-    height: 300px;
+    height: 240px;
     background-color: white;
     width: 100%;
     position: absolute;
-    bottom: -300px;
+    bottom: -240px;
 }
 
 .footer p {
@@ -600,7 +600,7 @@ b {
         background-size: cover;
     }
     .footer-links {
-        padding-top: 60px;
+        padding-top: 20px;
     }
 }
 
