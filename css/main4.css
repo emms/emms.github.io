@@ -121,7 +121,7 @@ h4 {
 }
 
 .subheading-xs {
-  bottom: 10vh;
+  bottom: 8vh;
   font-size: 30pt;
   left: 50%;
   transform: translateX(-50%);
@@ -183,7 +183,7 @@ h4 {
     margin: 52vh 0 0 10vw;
     color: #fff;
     position: absolute;
-    bottom: 23vh;
+    bottom: 21vh;
     left: 0;
   }
 }
